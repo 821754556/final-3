@@ -29,9 +29,9 @@ public class Retirement {
 		double dMW = iYearsToWork * 12;
 		double ReturnVal = 0;
 		if (dARK == 0) {
-			ReturnVal = TotalAmountSaved() / dARK;
+			ReturnVal = TotalAmountSaved() / dMW;
 		} else {
-			ReturnVal = TotalAmountSaved() * dARK / (Math.pow(1 + dARK, dARK) - 1);
+			ReturnVal = TotalAmountSaved() * dARK / (Math.pow(1 + dARK, dMW) - 1);
 		}
 		return ReturnVal;
 	}
