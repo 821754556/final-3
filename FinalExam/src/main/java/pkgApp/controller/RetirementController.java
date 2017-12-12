@@ -55,6 +55,8 @@ public class RetirementController implements Initializable {
 		txtAnnualReturnRetired.clear();
 		txtRequiredIncome.clear();
 		txtMonthlySSI.clear();
+		txtSaveEachMonth.clear();
+		txtNeedToSave.clear();
 
 	}
 
