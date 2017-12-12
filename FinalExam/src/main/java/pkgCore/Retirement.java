@@ -1,4 +1,4 @@
-package pkgCore;
+ package pkgCore;
 
 public class Retirement {
 
@@ -25,28 +25,28 @@ public class Retirement {
 	}
 
 	public double AmountToSave(double TotalAmountSAved) {
-		double dARK = dAnnualReturnWorking / 12;
-		double dMW = iYearsToWork * 12;
-		double ReturnVal = 0;
-		if (dARK == 0) {
-			ReturnVal = TotalAmountSaved() / dMW;
+		double A = dAnnualReturnWorking / 12;
+		double B = iYearsToWork * 12;
+		double C = 0;
+		if (A == 0) {
+			C = TotalAmountSaved() / B;
 		} else {
-			ReturnVal = TotalAmountSaved() * dARK / (Math.pow(1 + dARK, dMW) - 1);
+			C= TotalAmountSaved() * A / (Math.pow(1 + A, B) - 1);
 		}
-		return ReturnVal;
+		return C;
 	}
 
 	public double TotalAmountSaved() {
-		double dARR = dAnnualReturnRetired / 12;
-		double ReturnVal = 0;
-		int dMR = iYearsRetired * 12;
-		if (dARR == 0) {
-			ReturnVal = iYearsRetired * (dRequiredIncome - dMonthlySSI);
+		double A = dAnnualReturnRetired / 12;
+		double B = 0;
+		int C = iYearsRetired * 12;
+		if (A == 0) {
+			B = iYearsRetired * (dRequiredIncome - dMonthlySSI);
 		} else {
-			ReturnVal = (dRequiredIncome - dMonthlySSI) * ((Math.pow(1 + dARR, dMR) - 1) / dARR)
-					/ Math.pow(1 + dARR, dMR);
+			B = (dRequiredIncome - dMonthlySSI) * ((Math.pow(1 + A, C) - 1) / A)
+					/ Math.pow(1 + A, C);
 		}
-		return ReturnVal;
+		return B;
 	}
 
 	public int getiYearsToWork() {

@@ -10,8 +10,8 @@ public class TESTRetirement {
 
 	@Test
 	public void testRetirement() {
-		Retirement r = new Retirement(40,0.07,20,0.02,10000,2642);
-		assertEquals(r.TotalAmountSaved(),1454485.55,0.01);
-		assertEquals(r.AmountToSave(r.TotalAmountSaved()),554.13,0.01);
+		Retirement r = new Retirement(41,0.09,25,0.03,11000,3221);
+		assertEquals(r.TotalAmountSaved(),1640407.93053,0.01);
+		assertEquals(r.AmountToSave(r.TotalAmountSaved()),319.5827,0.01);
 	}
 }
